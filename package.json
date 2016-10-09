@@ -1,0 +1,36 @@
+{
+  "name": "rpi-profalux-shutters",
+  "version": "0.0.1",
+  "description": "Node library to control Profalux roller shutters with a Raspberry Pi through an HTTP API",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhayab/rpi-profalux-shutters.git"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "gpio",
+    "profalux",
+    "shutters",
+    "remote"
+  ],
+  "author": {
+    "name": "Dhaya Benmessaoud",
+    "email": "dhaya.benmessaoud@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhayab/rpi-profalux-shutters/issues"
+  },
+  "homepage": "https://github.com/dhayab/rpi-profalux-shutters#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "rpi-gpio": "^0.7.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

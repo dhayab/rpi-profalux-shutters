@@ -1,0 +1,11 @@
+# Application
+config.json
+
+# Node
+node_modules
+npm-debug.log
+
+# Visual Studio Code
+typings
+jsconfig.json
+typings.json

@@ -1,0 +1,12 @@
+{
+    "port": 19240,
+    "shutter": {
+        "name": "Living room",
+        "pins": {
+            "common": 37,
+            "down": 36,
+            "stop": 35,
+            "up": 38
+        }
+    }
+}
