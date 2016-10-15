@@ -1,6 +1,6 @@
 {
   "name": "rpi-profalux-shutters",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node library to control Profalux roller shutters with a Raspberry Pi through an HTTP API",
   "main": "index.js",
   "scripts": {},
