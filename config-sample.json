@@ -1,5 +1,6 @@
 {
     "port": 19240,
+    "webApp": true,
     "shutter": {
         "name": "Living room",
         "pins": {

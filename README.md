@@ -56,7 +56,13 @@ curl -X PUT http://raspberrypi:19240/shutter/stop
 curl -X PUT http://raspberrypi:19240/shutter/down
 ```
 
+### Web interface
+
+You can control your shutter with a virtual remote by going to `http://raspberrypi:19240/`, where:
+- `raspberrypi` is the IP address or the local network name of your Raspberry Pi
+- `19240` is the port specified in the configuration file
+
 ## Todo
-- [ ] Create a simple web interface
+- [x] Create a simple web interface
 - [ ] Handle multiple shutters
 - [ ] Compute approximate shutter position

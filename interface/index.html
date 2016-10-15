@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Profalux Control</title>
+    <link rel="stylesheet" href="./app.css">
+    <link rel="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-mobile-web-app-title" content="Profalux Ctrl">
+    <link rel="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <h1>Profalux</h1>
+    <i class="indicator-light"></i>
+    <ul class="actions">
+        <li>
+            <a href="#" class="button button--up" onclick="Profalux.press('up')">
+                <svg width="100px" height="76px" viewBox="0 0 100 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M50.5186958,13.0923062 C86.8075442,13.0923062 90.0669471,-5.73639582 98.4266869,1.78502846 C105.419911,10.4573788 86.8075442,45.7421054 86.8075442,45.7421054 C86.8075442,45.7421054 68.7831918,75 50.5186958,75 C32.2541998,75 13.9043218,45.7421054 13.9043218,45.7421054 C13.9043218,45.7421054 -7.22623387,10.5568313 2.61070466,1.78502846 C11.0809531,-5.76806834 13.9043218,13.0923062 50.5186958,13.0923062 Z" stroke="none" fill="#000000"></path>
+                </svg>
+            </a>
+        </li><li>
+            <a href="#" class="button button--stop" onclick="Profalux.press('stop')">
+                <svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle stroke="none" fill="#000000" cx="40" cy="40" r="40"></circle>
+                </svg>
+            </a>
+        </li><li>
+            <a href="#" class="button button--down" onclick="Profalux.press('down')">
+                <svg width="100px" height="76px" viewBox="0 0 100 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M50.5186958,13.0923062 C86.8075442,13.0923062 90.0669471,-5.73639582 98.4266869,1.78502846 C105.419911,10.4573788 86.8075442,45.7421054 86.8075442,45.7421054 C86.8075442,45.7421054 68.7831918,75 50.5186958,75 C32.2541998,75 13.9043218,45.7421054 13.9043218,45.7421054 C13.9043218,45.7421054 -7.22623387,10.5568313 2.61070466,1.78502846 C11.0809531,-5.76806834 13.9043218,13.0923062 50.5186958,13.0923062 Z" stroke="none" fill="#000000"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    <script src="./app.js"></script>
+    <script>Profalux.init({ indicator: '.indicator-light' });</script>
+</body>
+</html>
