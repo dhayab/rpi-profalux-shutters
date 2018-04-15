@@ -15,6 +15,7 @@ You'll also need to create a `config.json` file with these informations:
     "port": 19240,
     "shutter": {
         "name": "Living room",
+        "travel": 30000,
         "pins": {
             "common": 37,
             "down": 36,
@@ -30,6 +31,8 @@ Simply enter the physical GPIO pin number assigned to each of the remote dry-con
 - Stop
 - Up
 - Common
+
+The **travel** parameter allows *rpi-profalux-shutters* to simulate the position in percent of the shutter (starting from 0, closed).
 
 Remember to run `npm install` before actually running the server.
 
@@ -51,10 +54,23 @@ The application will initialize the GPIO pins and start the webserver. By defaul
 
 Then you'll be able to issue commands on your roller shutter with a PUT request on these URLs:
 ```bash
-curl -X PUT http://raspberrypi:19240/shutter/up
+curl -X PUT http://raspberrypi:19240/shutter/set/100
 curl -X PUT http://raspberrypi:19240/shutter/stop
-curl -X PUT http://raspberrypi:19240/shutter/down
+curl -X PUT http://raspberrypi:19240/shutter/set/0
 ```
+
+You can also retrieve the current position and state of the shutter with:
+
+```shell
+curl -X GET http://raspberrypi:19240/shutter/get/position
+curl -X GET http://raspberrypi:19240/shutter/get/state
+```
+
+Valid values for current state are:
+
+- 0: the shutter is closing
+- 1: the shutter is opening
+- 2: the shutter is stopped
 
 ### Web interface
 
@@ -65,4 +81,4 @@ You can control your shutter with a virtual remote by going to `http://raspberry
 ## Todo
 - [x] Create a simple web interface
 - [ ] Handle multiple shutters
-- [ ] Compute approximate shutter position
+- [x] Compute approximate shutter position

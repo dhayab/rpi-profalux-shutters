@@ -2,7 +2,7 @@
 'use strict';
 
 (function() {
-    var PROFALUX_PRESSION_DURATION = 1000;
+    var PROFALUX_PRESSION_DURATION = 500;
     var PROFALUX_VALID_ACTIONS = ['up', 'down', 'stop'];
 
     var Profalux = (function() {
@@ -29,7 +29,9 @@
             disablePressing();
 
             var xhr = new XMLHttpRequest();
-            xhr.open('PUT', '/shutter/' + action.toLowerCase(), true);
+            xhr.open('PUT', '/shutter/' + action.toLowerCase().replace(/.*/, function(action) {
+                return action === 'stop' ? action : 'set/' + { down: 0, up: 100 }[action];
+            }), true);
             xhr.send();
 
             enablePressing();

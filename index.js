@@ -16,6 +16,9 @@ const shutter = new Shutter(config.shutter);
 shutter.init()
     .then(() => Server.init(config))
     .then(() => {
-        Server.on('action', ({ action }) => shutter.execute(action));
+        Server.on('getPosition', (callback) => callback(Math.round(shutter.currentPosition)));
+        Server.on('getState', (callback) => callback(shutter.currentState));
+        Server.on('setPosition', ({ targetPosition }) => shutter.update(targetPosition));
+        Server.on('stop', () => shutter.stop());
     })
 ;
